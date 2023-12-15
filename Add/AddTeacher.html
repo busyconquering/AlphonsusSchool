@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Teacher</title>
+    <style>
+        body {
+            font-family: Tahoma, Impact;
+            background-color: rgb(5, 28, 44);
+            color: rgb(245, 225, 165);
+            }
+   </style>
+</head>
+<body>
+
+    <h1>In this page you can add a Teacher</h1>
+    <form action="AddTeacher.php" method="post">
+        <label for="TeacherID">Enter Teacher ID:</label>
+        <input type="text" name="TeacherID" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <label for="TeacherFullname">Enter Teacher Fullname:</label>
+        <input type="text" name="TeacherFullname" required pattern="[A-za-z]+" title="Enter Letters ONLY"><br>
+
+        <label for="TeacherHomeAddress">Enter Teacher Home Address:</label>
+        <input type="text" name="TeacherHomeAddress" required pattern="[A-za-z0-9]+" title="Enter WITHOUT space"><br>
+
+        <label for="TeacherPhoneNumber">Enter Teacher Phone Number:</label>
+        <input type="tel" name="TeacherPhoneNumber" required pattern="[0-9]+" title="Enter Phone Number ONLY"><br>
+
+        <label for="TeacherSalary">Enter Teacher Salary:</label>
+        <input type="text" name="TeacherSalary" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <label for="ClassID">Enter Class ID:</label>
+        <input type="text" name="ClassID" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <button type="submit">Click to Add a Teacher</button>
+    </form>
+
+</body>
+</html>

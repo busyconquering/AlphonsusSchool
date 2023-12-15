@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student Financials</title>
+    <style>
+        body {
+            font-family: Tahoma, Impact;
+            background-color: rgb(5, 28, 44);
+            color: rgb(245, 225, 165);
+            }
+   </style>
+</head>
+<body>
+
+    <h1>In this page you can update Student Financials</h1>
+    <form action="UpdateStudentFinancials.php" method="post">
+
+        <label for="StudentFinancialsID">Enter Student Financials ID:</label>
+        <input type="text" name="StudentFinancialsID" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <label for="StudentFinancialsFoodCosts">Enter Student Food Costs:</label>
+        <input type="number" name="StudentFinancialsFoodCosts" required pattern="[A-za-z0-9]+" title="Please enter Price only"><br>
+
+        <label for="StudentFinancialsTransportCosts">Enter Student Transport Costs:</label>
+        <input type="number" name="StudentFinancialsTransportCosts" required pattern="[A-za-z0-9]+" title="Please enter Price"><br>
+
+        <label for="StudentFinancialsOtherCosts">Enter Student Other Costs:</label>
+        <input type="number" name="StudentFinancialsOtherCosts" required pattern="[A-za-z0-9]+" title="Please enter Price"><br>
+
+        <label for="StudentID">Enter Student ID:</label>
+        <input type="text" name="StudentID" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <button type="submit">Click to Update Student Financials</button>
+    </form>
+
+</body>
+</html>

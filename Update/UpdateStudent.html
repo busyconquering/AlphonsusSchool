@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update a Student</title>
+    <style>
+        body {
+            font-family: Tahoma, Impact;
+            background-color: rgb(5, 28, 44);
+            color: rgb(245, 225, 165);
+            }
+   </style>
+</head>
+<body>
+    <h1>In this page you can update a Student</h1>
+    <form action="UpdateStudent.php" method="post">
+        <label for="StudentID">Enter Student ID:</label>
+        <input type="text" name="StudentID" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <label for="StudentFullname">Enter Student Fullname:</label>
+        <input type="text" name="StudentFullname" required pattern="[A-za-z]+" title="Enter Letters ONLY"><br>
+
+        <label for="StudentHomeAddress">Enter Student Home Address:</label>
+        <input type="text" name="StudentHomeAddress" required pattern="[A-za-z0-9]+" title="Enter Letters ONLY"><br>
+
+        <label for="StudentMedicalRecords">Enter Student Medical Records:</label>
+        <input type="text" name="StudentMedicalRecords" required pattern="[A-za-z]+" title="Enter Letters ONLY"><br>
+
+        <label for="StudentDateOfBirth">Enter Student Date Of Birth:</label>
+        <input type="date" name="StudentDateOfBirth" ><br>
+
+        <label for="StudentEmailAddress">Enter Student Email Address:</label>
+        <input type="email" name="StudentEmailAddress" title="Enter EMAIL ONLY with @ format"><br>
+
+        <label for="ParentGuardianID">Enter Parent or Guardian ID:</label>
+        <input type="text" name="ParentGuardianID" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <label for="ClassID">Enter Class ID:</label>
+        <input type="text" name="ClassID" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <label for="StudentFinancialsID">Enter Financials ID:</label>
+        <input type="text" name="StudentFinancialsID" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <button type="submit">Click to Update a Student</button>
+    </form>
+</body>
+</html>

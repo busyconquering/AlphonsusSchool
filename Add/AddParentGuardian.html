@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Parent or Guardian</title>
+    <style>
+        body {
+            font-family: Tahoma, Impact;
+            background-color: rgb(5, 28, 44);
+            color: rgb(245, 225, 165);
+            }
+   </style>
+</head>
+<body>
+
+    <h1>In this page you can add Parents and Guardians</h1>
+
+    <form action="AddParentGuardian.php" method="post">
+
+        <label for="ParentGuardianID">Enter Parent ID:</label>
+        <input type="text" name="ParentGuardianID" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <label for="ParentGuardianFullname">Enter Parent Fullname:</label>
+        <input type="text" name="ParentGuardianFullname" required pattern="[A-za-z]+" title="Enter Numbers ONLY"><br>
+
+        <label for="ParentGuardianPhoneNumber">Enter Parent Phone Number:</label>
+        <input type="number" name="ParentGuardianPhoneNumber" required pattern="[0-9]+" title="Enter Phone Number ONLY"><br> 
+
+        <label for="ParentGuardianEmailAddress">Enter Parent Email Address:</label>
+        <input type="email" name="ParentGuardianEmailAddress" title="Enter EMAIL ONLY with @ format"><br>
+
+        <label for="ParentGuardianHomeAddress">Enter Parent Home Address:</label>
+        <input type="text" name="ParentGuardianHomeAddress" required pattern="[A-za-z0-9]+" title="Enter Letters ONLY"><br>
+
+        <label for="StudentID">Entern Student ID:</label>
+        <input type="text" name="StudentID" required pattern="[0-9]+" title="Enter Numbers ONLY"><br>
+
+        <button type="submit">Click to Add Parent or Guardian</button>
+    </form>
+</body>
+</html>
