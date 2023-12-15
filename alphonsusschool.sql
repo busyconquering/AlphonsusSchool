@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 15, 2023 at 12:52 PM
+-- Generation Time: Dec 15, 2023 at 05:45 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -36,28 +36,19 @@ CREATE TABLE `Class` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- RELATIONSHIPS FOR TABLE `Class`:
---   `TeacherID`
---       `Teacher` -> `TeacherID`
---   `StudentID`
---       `Student` -> `StudentID`
---   `StudentID`
---       `Student` -> `StudentID`
---
-
---
 -- Dumping data for table `Class`
 --
 
 INSERT INTO `Class` (`ClassID`, `ClassName`, `ClassCapacity`, `TeacherID`, `StudentID`) VALUES
-(111, 'Biology', 20, 76, 21231),
-(113, 'Maths', 12, 12, 98340),
-(122, 'Discipline', 20, 46, 38491),
-(143, 'Chemistry', 14, 43, 12341),
-(154, 'Physics', 5, 11, 87341),
-(162, 'Health', 19, 43, 88374),
-(166, 'Science', 16, 42, 99384),
-(176, 'Keyboard', 19, 23, 99120);
+(111, 'ReceptionYear', 20, 76, 21231),
+(113, 'YearOne', 12, 12, 98340),
+(122, 'YearTwo', 20, 46, 38491),
+(143, 'YearThree', 14, 43, 12341),
+(154, 'YearFour', 5, 11, 87341),
+(162, 'YearFive', 19, 43, 88374),
+(166, 'YearSix', 16, 42, 99384),
+(176, 'Keyboard', 19, 23, 99120),
+(334455, 'Maths', 15, 992133, 19292);
 
 -- --------------------------------------------------------
 
@@ -73,14 +64,6 @@ CREATE TABLE `ParentGuardian` (
   `ParentGuardianHomeAddress` varchar(255) DEFAULT NULL,
   `StudentID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- RELATIONSHIPS FOR TABLE `ParentGuardian`:
---   `StudentID`
---       `Student` -> `StudentID`
---   `StudentID`
---       `Class` -> `StudentID`
---
 
 --
 -- Dumping data for table `ParentGuardian`
@@ -109,16 +92,6 @@ CREATE TABLE `Student` (
   `ClassID` int(11) NOT NULL,
   `StudentFinancialsID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- RELATIONSHIPS FOR TABLE `Student`:
---   `ParentGuardianID`
---       `ParentGuardian` -> `ParentGuardianID`
---   `ClassID`
---       `Class` -> `ClassID`
---   `StudentFinancialsID`
---       `StudentFinancials` -> `StudentFinancialsID`
---
 
 --
 -- Dumping data for table `Student`
@@ -152,16 +125,6 @@ CREATE TABLE `StudentFinancials` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- RELATIONSHIPS FOR TABLE `StudentFinancials`:
---   `StudentID`
---       `Student` -> `StudentID`
---   `StudentID`
---       `Class` -> `StudentID`
---   `StudentID`
---       `ParentGuardian` -> `StudentID`
---
-
---
 -- Dumping data for table `StudentFinancials`
 --
 
@@ -186,14 +149,6 @@ CREATE TABLE `Teacher` (
   `TeacherSalary` decimal(10,2) DEFAULT NULL,
   `ClassID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- RELATIONSHIPS FOR TABLE `Teacher`:
---   `ClassID`
---       `Class` -> `ClassID`
---   `ClassID`
---       `Student` -> `ClassID`
---
 
 --
 -- Dumping data for table `Teacher`
@@ -259,7 +214,7 @@ ALTER TABLE `Teacher`
 -- AUTO_INCREMENT for table `Class`
 --
 ALTER TABLE `Class`
-  MODIFY `ClassID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23433;
+  MODIFY `ClassID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=334456;
 
 --
 -- AUTO_INCREMENT for table `ParentGuardian`
